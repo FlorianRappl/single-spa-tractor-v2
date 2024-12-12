@@ -43,11 +43,13 @@ This implementation is deliberately kept simple to focus on the micro frontends 
 
 ### Performance
 
-Several performance optimizations could still be applied, however, in the out-of-the-box state with three micro frontends and multiple components / pages included we'll end up with a lighthouse score of 100/100, which is great.
+Several performance optimizations could still be applied, however, in the out-of-the-box state with three micro frontends and multiple components / pages included we'll end up with a lighthouse score of 89/100, which is decent, but not great.
 
 ![Lighthouse Score](./lighthouse.png)
 
-As a comparison a most lightweight SSR-only solution using the same codebase would be around 99/100. Another SPA sample that uses [Picard.js](https://picard.js.org/) with Native Federation ended up at 88/100. Using a full framework like [Piral](https://www.piral.io) (which also includes a much cleaner codebase and a more powerful routing engine) ends up at 100/100, too. Hence, independent if you use only Module Federation or a micro frontend framework like Piral - a good solution should give optimal performance.
+As a comparison a most lightweight SSR-only solution using the same codebase would be around 99/100. Another SPA sample that uses [Picard.js](https://picard.js.org/) with Native Federation ended up at 88/100. Using a full framework like [Piral](https://www.piral.io) (which also includes a much cleaner codebase and a more powerful routing engine) ends up at 100/100, too.
+
+Replacing SystemJS with Module Federation gives you 2 more lighthouse points. So, there is potential in the right direction.
 
 ## How to run locally
 
